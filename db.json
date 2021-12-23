@@ -1,0 +1,64 @@
+{
+  "events": [
+    {
+      "id": 123,
+      "category": "animal welfare",
+      "title": "Cat Adoption Day",
+      "description": "Find your new feline friend at this event.",
+      "location": "Meow Town",
+      "date": "January 28, 2022",
+      "time": "12:00",
+      "organizer": "Kat Laydee"
+    },
+    {
+      "id": 456,
+      "category": "food",
+      "title": "Community Gardening",
+      "description": "Join us as we tend to the community edible plants.",
+      "location": "Flora City",
+      "date": "March 14, 2022",
+      "time": "10:00",
+      "organizer": "Fern Pollin"
+    },
+    {
+      "id": 789,
+      "category": "sustainability",
+      "title": "Beach Cleanup",
+      "description": "Help pick up trash along the shore.",
+      "location": "Playa Del Carmen",
+      "date": "July 22, 2022",
+      "time": "11:00",
+      "organizer": "Carey Wales"
+    },
+    {
+      "id": "69462b7e-6d3d-4c87-8516-d5f9b32bb02b",
+      "category": "education",
+      "title": "learn Vue",
+      "description": "Learn Vue in Vue Mastery",
+      "location": "Beijing",
+      "date": "12/22/2021",
+      "time": "14:00",
+      "organizer": "Mingkai Zhang"
+    },
+    {
+      "id": "dbfc22e0-92cb-4696-b65b-acbadcc4ac42",
+      "category": "education",
+      "title": "learn FastAPI",
+      "description": "learn Fast API to build back end ",
+      "location": "Beijing",
+      "date": "12/23/2021",
+      "time": "09:00",
+      "organizer": "Mingkai Zhang"
+    },
+    {
+      "id": "75ac2e3a-6c79-4a82-9556-112b6696c868",
+      "category": "sustainability",
+      "title": "play badminton",
+      "description": "play badminton with friends ",
+      "location": "sujiatuo",
+      "date": "12/23/2021",
+      "time": "19:00",
+      "organizer": "Mingkai Zhang"
+    }
+  ]
+}
