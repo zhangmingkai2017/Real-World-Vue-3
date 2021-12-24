@@ -59,6 +59,56 @@
       "date": "12/23/2021",
       "time": "19:00",
       "organizer": "Mingkai Zhang"
+    },
+    {
+      "id": "b7db0b7a-5e6b-49d6-8ad0-4c814d36bd7b",
+      "category": "nature",
+      "title": "climb mountain",
+      "description": "Climb fenghuangling in sujiatuo ",
+      "location": "sujiatuo",
+      "date": "12/24/2021",
+      "time": "09:00",
+      "organizer": "Mingkai Zhang"
+    },
+    {
+      "id": "14138ff7-3f97-4966-93b4-7ad69fc59df8",
+      "category": "nature",
+      "title": "Swim",
+      "description": "Swim in tsinghua university",
+      "location": "Tsinghua University",
+      "date": "11/28/2020",
+      "time": "19:00",
+      "organizer": "Mingkai Zhang"
+    },
+    {
+      "id": "52aa4cf6-6ccc-4249-ad7b-3289c7a8a818",
+      "category": "housing",
+      "title": "cook dinner",
+      "description": "soybean milk, quick-fried mutton slices with scallions",
+      "location": "Tongzeyuan ",
+      "date": "12/24/2021",
+      "time": "20:00",
+      "organizer": "Mingkai Zhang"
+    },
+    {
+      "id": "180f10a1-27b9-4cc2-914c-bc802ed8eff8",
+      "category": "sustainability",
+      "title": "moxa-moxibustion",
+      "description": "moxa-moxibustion to healthcare",
+      "location": "Tongzeyuan",
+      "date": "12/29/2021",
+      "time": "21:30",
+      "organizer": "Mingkai Zhang"
+    },
+    {
+      "id": "75b9a8e4-77cf-40ba-af12-af0b538abac0",
+      "category": "food",
+      "title": "lunch ",
+      "description": "have lunch with friends ",
+      "location": "BICI",
+      "date": "12/24/2021",
+      "time": "12:00",
+      "organizer": "Mingkai Zhang"
     }
   ]
 }
