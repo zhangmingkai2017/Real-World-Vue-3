@@ -1,122 +1,117 @@
 <template>
-<h1> Create an event </h1>
+  <h1> Create an event </h1>
 
   <div class="form-container">
 
     <form @submit.prevent="onSubmit">
-      <label>Select a categary:</label>
+      <label>Select a category:</label>
       <select v-model="event.category">
-        <option
-        v-for="option in categories"
-        :value="option"
-        :key="option"
-        :selected="option === event.category"
-        > {{ option }} </option>
+        <option v-for="option in categories" :value="option" :key="option" :selected="option === event.category">
+          {{ option }} </option>
       </select>
 
       <h3>Name & describe your event</h3>
 
-      <label>Title</label>
-      <input
-      v-model="event.title"
-      type="text"
-      placeholder="Title"
-      >
+      <BaseInput
+        v-model="event.title"
+        label="Title"
+      />
 
-      <label>Description</label>
-    <input
-      v-model="event.description"
-      type="text"
-      placeholder="Description"
-    />
+      <BaseInput
+        v-model="event.description"
+        label="Description" 
+      />
 
-    <h3>Where is your event?</h3>
+      <h3>Where is your event?</h3>
 
-    <label>Location</label>
-    <input
-      v-model="event.location"
-      type="text"
-      placeholder="Location"
-    />
+      <BaseInput
+        v-model="event.location" 
+        label="Location" 
+      />
 
-    <h3>When is your event?</h3>
-    <label>Date</label>
-    <input
-      v-model="event.date"
-      type="text"
-      placeholder="Date"
-    />
+      <h3>When is your event?</h3>
 
-    <label>Time</label>
-    <input
-      v-model="event.time"
-      type="text"
-      placeholder="Time"
-    />
+      <BaseInput
+        v-model="event.date"
+        label="Date"
+      />
 
-    <button type="submit">Submit</button>
+      <BaseInput
+        v-model="event.time" 
+        label="Time" 
+      />
+
+      <button type="submit">Submit</button>
 
     </form>
-    
+
   </div>
 
 </template>
 
 
 <script>
-import { v4 as uuidv4 } from 'uuid'
+  import {v4 as uuidv4} from 'uuid'
+  import BaseInput from "@/components/BaseInput.vue";
 
-export default {
-  data() {
-    return {
-      categories: [
-      'sustainability',
-      'nature',
-      'animal welfare',
-      'housing',
-      'education',
-      'food',
-      'community'
-      ],
-      event: {
-        id: '',
-        category: '',
-        title: '',
-        description: '',
-        location: '',
-        date: '',
-        time: '',
-        organizer: ''
+  export default {
+    components: {
+      BaseInput
+    },
+    data() {
+      return {
+        categories: [
+          'sustainability',
+          'nature',
+          'animal welfare',
+          'housing',
+          'education',
+          'food',
+          'community'
+        ],
+        event: {
+          id: '',
+          category: '',
+          title: '',
+          description: '',
+          location: '',
+          date: '',
+          time: '',
+          organizer: ''
+        }
       }
-    }
-  },
-  methods: {
-    onSubmit() {
-      const event = {
-        ...this.event,
-        id: uuidv4(),
-        organizer: this.$store.state.user
+    },
+    methods: {
+      onSubmit() {
+        const event = {
+          ...this.event,
+          id: uuidv4(),
+          organizer: this.$store.state.user
+        }
+        this.$store.dispatch('createEvent', event)
+          .then(() => {
+            this.$router.push({
+              name: 'EventDetails',
+              params: {
+                id: event.id
+              }
+            })
+          })
+          .catch(error => {
+            this.$router.push({
+              name: 'ErrorDisplay',
+              params: {
+                error: error
+              }
+            })
+          })
       }
-      this.$store.dispatch('createEvent', event)
-      .then(() => {
-        this.$router.push({
-          name: 'EventDetails',
-          params: { id: event.id }
-        })
-      })
-      .catch( error => {
-        this.$router.push({
-          name: 'ErrorDisplay',
-          params: { error: error }
-        })
-      })
-    }
-  },
-  
-}
+    },
+
+  }
 </script>
 
 
 <style>
-  
+
 </style>

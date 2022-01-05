@@ -109,6 +109,26 @@
       "date": "12/24/2021",
       "time": "12:00",
       "organizer": "Mingkai Zhang"
+    },
+    {
+      "id": "a023b613-4db4-46fb-a909-56ca60231ef5",
+      "category": "housing",
+      "title": "climb mountain",
+      "description": "learn Fast API to build back end",
+      "location": "Tsinghua University",
+      "date": "12/22/2021",
+      "time": "09:00",
+      "organizer": "Mingkai Zhang"
+    },
+    {
+      "id": "06dfd8bf-1862-45b8-a4b0-0c37aad7b824",
+      "category": "",
+      "title": "Swim",
+      "description": "",
+      "location": "",
+      "date": "",
+      "time": "",
+      "organizer": "Mingkai Zhang"
     }
   ]
 }
