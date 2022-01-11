@@ -42,6 +42,21 @@
         label="Time" 
       />
 
+      <h3>Extras</h3>
+      <div>
+        <BaseCheckbox
+          v-model="event.extras.catering"
+          label="Catering"
+        />
+      </div>
+
+      <div>
+        <BaseCheckbox
+          v-model="event.extras.music"
+          label="Live music"
+        />
+      </div>
+
       <button type="submit">Submit</button>
 
     </form>
@@ -55,11 +70,13 @@
   import {v4 as uuidv4} from 'uuid'
   import BaseInput from "@/components/BaseInput.vue";
   import BaseSelect from "@/components/BaseSelect.vue";
+  import BaseCheckbox from "@/components/BaseCheckbox.vue";
 
   export default {
     components: {
       BaseInput,
-      BaseSelect
+      BaseSelect,
+      BaseCheckbox
     },
     data() {
       return {
@@ -80,7 +97,11 @@
           location: '',
           date: '',
           time: '',
-          organizer: ''
+          organizer: '',
+          extras: {
+            catering: false,
+            music: false
+          }
         }
       }
     },

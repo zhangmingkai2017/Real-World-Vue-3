@@ -29,6 +29,20 @@
       "date": "July 22, 2022",
       "time": "11:00",
       "organizer": "Carey Wales"
+    },
+    {
+      "id": "9aa200df-9a31-4a08-ab71-1037247d9ab1",
+      "category": "food",
+      "title": "cook dinner",
+      "description": "Climb fenghuangling in sujiatuo",
+      "location": "Beijing",
+      "date": "12/23/2021",
+      "time": "",
+      "organizer": "Mingkai Zhang",
+      "extras": {
+        "catering": true,
+        "music": true
+      }
     }
   ]
 }
