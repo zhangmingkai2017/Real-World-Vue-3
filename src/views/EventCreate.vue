@@ -57,6 +57,25 @@
         />
       </div>
 
+      <h3>Are pets allowed</h3>
+      <div>
+        <BaseRadio
+          v-model="event.pets"
+          :value="1"
+          label="Yes"
+          name="pets"
+        />
+      </div>
+
+      <div>
+        <BaseRadio
+          v-model="event.pets"
+          :value="0"
+          label="No"
+          name="pets"
+        />
+      </div>
+
       <button type="submit">Submit</button>
 
     </form>
@@ -71,12 +90,14 @@
   import BaseInput from "@/components/BaseInput.vue";
   import BaseSelect from "@/components/BaseSelect.vue";
   import BaseCheckbox from "@/components/BaseCheckbox.vue";
+  import BaseRadio from "@/components/BaseRadio.vue";
 
   export default {
     components: {
       BaseInput,
       BaseSelect,
-      BaseCheckbox
+      BaseCheckbox,
+      BaseRadio
     },
     data() {
       return {
