@@ -3,7 +3,7 @@
     type="radio"
     :checked="modelValue === value"
     :value="value"
-    @change="emit('update:modelValue', value)"
+    @change="$emit('update:modelValue', value)"
     v-bind="$attrs"
   />
   <label v-if="label"> {{ label }} </label>
@@ -14,7 +14,7 @@ export default {
   props: {
     label: {
       type: String,
-      default: ','
+      default: ''
     },
     modelValue: {
       type: [String, Number],

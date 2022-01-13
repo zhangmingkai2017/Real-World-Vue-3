@@ -73,6 +73,21 @@
         "catering": true,
         "music": true
       }
+    },
+    {
+      "id": "efcda57e-7898-4d44-975b-16a8bb5cded5",
+      "category": "education",
+      "title": "learn FastAPI",
+      "description": "cook dinner congbaoyangrou",
+      "location": "Tsinghua University",
+      "date": "12/24/2021",
+      "time": "19:00",
+      "organizer": "Mingkai Zhang",
+      "pets": 0,
+      "extras": {
+        "catering": true,
+        "music": true
+      }
     }
   ]
 }

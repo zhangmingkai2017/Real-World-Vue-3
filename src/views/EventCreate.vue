@@ -11,60 +11,66 @@
         label="Select a category"
       />
 
-      <h3>Name & describe your event</h3>
+      <fieldset>
+        <legend>Name & describe your event</legend>
 
-      <BaseInput
-        v-model="event.title"
-        label="Title"
-      />
-
-      <BaseInput
-        v-model="event.description"
-        label="Description" 
-      />
-
-      <h3>Where is your event?</h3>
-
-      <BaseInput
-        v-model="event.location" 
-        label="Location" 
-      />
-
-      <h3>When is your event?</h3>
-
-      <BaseInput
-        v-model="event.date"
-        label="Date"
-      />
-
-      <BaseInput
-        v-model="event.time" 
-        label="Time" 
-      />
-
-      <h3>Extras</h3>
-      <div>
-        <BaseCheckbox
-          v-model="event.extras.catering"
-          label="Catering"
+        <BaseInput
+          v-model="event.title"
+          label="Title"
         />
-      </div>
-
-      <div>
-        <BaseCheckbox
-          v-model="event.extras.music"
-          label="Live music"
+  
+        <BaseInput
+          v-model="event.description"
+          label="Description" 
         />
-      </div>
+      </fieldset>
 
-      <h3>Are pets allowed</h3>
-      <div>
-        <BaseRadioGroup
-          v-model="event.pets"
-          name="pets"
-          :options="petOptions"
+      <fieldset>
+        <legend>Where and when is your event?</legend>
+
+        <BaseInput
+          v-model="event.location" 
+          label="Location" 
         />
-      </div>
+  
+        <BaseInput
+          v-model="event.date"
+          label="Date"
+        />
+  
+        <BaseInput
+          v-model="event.time" 
+          label="Time" 
+        />
+      </fieldset>
+
+      <fieldset>
+        <legend>Extras</legend>
+        <div>
+          <BaseCheckbox
+            v-model="event.extras.catering"
+            label="Catering"
+          />
+        </div>
+  
+        <div>
+          <BaseCheckbox
+            v-model="event.extras.music"
+            label="Live music"
+          />
+        </div>
+      </fieldset>
+            
+      <fieldset>
+        <legend>Are pets allowed</legend>
+        <div>
+          <BaseRadioGroup
+            v-model="event.pets"
+            name="pets"
+            :options="petOptions"
+          />
+        </div>
+      </fieldset>
 
       <button type="submit">Submit</button>
 
@@ -153,5 +159,15 @@
 
 
 <style>
+fieldset {
+  border: 0;
+  margin: 0;
+  padding: 0;
+}
 
+legend {
+  font-size: 28px;
+  font-weight: 700;
+  margin-top: 20px;
+}
 </style>
